@@ -28,14 +28,10 @@ class ClassificationCNN:
         self.validation_samples = 1184
         self.test_samples = 1184
 
-        # self.train_samples = 41
-        # self.validation_samples = 41
-        # self.test_samples = 41
-
         self.predicted_labels = []
 
         self.batch_size = 32
-        self.epochs = 1
+        self.epochs = 2
 
         self.model = None
 
@@ -45,11 +41,6 @@ class ClassificationCNN:
         self.history = None
 
         self.datagen = ImageDataGenerator(rescale=1./255)
-
-        self.TP = []
-        self.TN = []
-        self.FN = []
-        self.FP = []
 
         self.fpr = []
         self.tpr = []
@@ -123,18 +114,18 @@ class ClassificationCNN:
             batch_size=self.batch_size, shuffle=False,
             class_mode='categorical')
 
-        self.test_data, self.test_labels_categorical = next(test_generator)
-        self.test_labels = np.argmax(self.test_labels_categorical, axis = 1)
-        print(self.test_labels)
-        #print("test labels ordonate", self.test_labels)
+        self.test_labels = test_generator.classes
 
-        self.predicted_labels_proba = self.model.predict_generator(test_generator, steps=1, workers=0)
+
+        print("test labels:", self.test_labels)
+
+        self.predicted_labels_proba = self.model.predict_generator(test_generator, steps=self.test_samples // self.batch_size)
 
         self.predicted_labels = np.argmax(self.predicted_labels_proba, axis=1)
-        metr = self.model.evaluate_generator(test_generator, steps=1)
-        print("predicted", self.predicted_labels)
-        print("predicted proba", self.predicted_labels_proba)
-        #print(self.predicted_labels)
+
+        metr = self.model.evaluate_generator(test_generator, steps=self.test_samples // self.batch_size)
+
+        print("predicted labels:", self.predicted_labels)
 
         return [metr[0], metr[1]]
 
@@ -152,7 +143,7 @@ class ClassificationCNN:
         plt.ylabel('Loss')
         plt.legend()
 
-        plt.savefig("D:/Licenta/Interfata/resources/images/loss_CNN.png")
+        plt.savefig("../results/loss_CNN.png")
 
     def plot_accuracy(self):
         plt.clf()
@@ -169,7 +160,7 @@ class ClassificationCNN:
         plt.ylabel('Accuracy')
         plt.legend()
 
-        plt.savefig("D:/Licenta/Interfata/resources/images/accuracy_CNN.png", dpi=500)
+        plt.savefig("../results/accuracy_CNN.png", dpi=500)
 
     def generate_confusion_matrix(self):
         self.confusion_matrix = confusion_matrix(self.test_labels, self.predicted_labels)
@@ -196,8 +187,8 @@ class ClassificationCNN:
         ax.set_xticks(np.arange(len(self.classes)))
         ax.set_yticks(np.arange(len(self.classes)))
 
-        ax.set_xticklabels(self.classes,  rotation=45, ha="right", rotation_mode="anchor")
-        ax.set_yticklabels(self.classes)
+        ax.set_xticklabels(range(len(self.classes)))
+        ax.set_yticklabels(range(len(self.classes)))
 
         ax.set_xlabel('Predicted labels')
         ax.set_ylabel('True labels')
@@ -218,11 +209,16 @@ class ClassificationCNN:
 
         # Ajustare automata a parametrilor figurii
         fig.tight_layout()
-        fig.savefig("D:/Licenta/Interfata/resources/images/confusion_matrix_CNN.png", dpi=500)
+        fig.savefig("../results/confusion_matrix_CNN.png", dpi=500)
         # plt.show()
 
     def get_values(self, matrix, classes):
         self.total_test_samples = np.sum(matrix[:, :])
+
+        self.TP = []
+        self.TN = []
+        self.FN = []
+        self.FP = []
 
         for each in classes:
             class_num = self.classes.index(each)
@@ -300,31 +296,27 @@ class ClassificationCNN:
         plt.legend(loc='lower right')
         plt.tight_layout()
         # plt.show()
-        plt.savefig("D:/Licenta/Interfata/resources/images/ROC_curve_CNN.png", dpi=500)
+        plt.savefig("../results/ROC_curve_CNN.png", dpi=500)
 
 
-# train_data_dir = 'D:/train'
-# validation_data_dir = 'D:/train'
-# test_data_dir = 'D:/train'
-
-train_data_dir = 'D:/Licenta/newdataset/train'
-validation_data_dir = 'D:/Licenta/newdataset/validation'
-test_data_dir = 'D:/Licenta/newdataset/test'
-
-clf = ClassificationCNN()
-clf.set_data_path(train_data_dir, validation_data_dir, test_data_dir)
-clf.create_model()
-clf.train()
-print(clf.get_loss_and_accuracy())
-clf.plot_loss()
-clf.plot_accuracy()
-clf.generate_confusion_matrix()
-clf.normalize_confusion_matrix()
-clf.plot_confusion_matrix()
-clf.get_values(clf.confusion_matrix, clf.classes)
-print(clf.confusion_matrix)
-print(clf.get_test_accuracy_oonf_matr())
-print(clf.get_test_recall_per_class())
-print(clf.get_test_precision_per_class())
-
-clf.plot_ROC_curve()
+# train_data_dir = '../images/cnn_dataset/train'
+# validation_data_dir = '../images/cnn_dataset/validation'
+# test_data_dir = '../images/cnn_dataset/test'
+#
+# clf = ClassificationCNN()
+# clf.set_data_path(train_data_dir, validation_data_dir, test_data_dir)
+# clf.create_model()
+# clf.train()
+# print(clf.get_loss_and_accuracy())
+# clf.plot_loss()
+# clf.plot_accuracy()
+# clf.generate_confusion_matrix()
+# clf.normalize_confusion_matrix()
+# clf.plot_confusion_matrix()
+# clf.get_values(clf.confusion_matrix, clf.classes)
+# print(clf.confusion_matrix)
+# print(clf.get_test_accuracy_oonf_matr())
+# print(clf.get_test_recall_per_class())
+# print(clf.get_test_precision_per_class())
+#
+# clf.plot_ROC_curve()
