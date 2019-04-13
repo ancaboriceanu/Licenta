@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 from sklearn import utils
 from skimage.feature import greycomatrix, greycoprops
 import pandas as pd
-import pickle
 from matplotlib import pyplot as plt
 from sklearn.model_selection import GridSearchCV
 
@@ -39,10 +38,7 @@ class ClassificationRandomForest:
 
         self.total_test_samples = 0
 
-        self.TP = []
-        self.TN = []
-        self.FN = []
-        self.FP = []
+
 
         self.fpr = []
         self.tpr = []
@@ -96,8 +92,6 @@ class ClassificationRandomForest:
         # feature_imp = pd.Series(cl.feature_importances_,index=["b mean", "g mean", "r mean", "b dev", "g dev",
         # "r dev"]).sort_values(ascending=False)
 
-        # Salvare model
-        pickle.dump(self.classification, open('D:/Licenta/Models/random_forest_model.sav', 'wb'))
 
     def get_train_accuracy(self):
         # Calcul acuratete pentru datele de antrenare
@@ -105,7 +99,6 @@ class ClassificationRandomForest:
 
     def predict(self):
         # Testing
-        # model = pickle.load(open('D:/Licenta/svm_model.sav', 'rb'))
         self.predicted_labels = self.classification.predict(self.test_data)
 
     def get_test_accuracy(self):
@@ -160,12 +153,17 @@ class ClassificationRandomForest:
         #ax.text(10,10,"dfs", transform=ax.transAxes, fontsize=8, verticalalignment='top', ha='right', boxstyle=round)
         # Ajustare automata a parametrilor figurii
         fig.tight_layout()
-        fig.savefig("D:/Licenta/Interfata/resources/images/confusion_matrix_RF.png", dpi=500)
+        fig.savefig("../results/confusion_matrix_RF.png", dpi=500)
         # plt.show()
 
 
     def get_values(self, matrix, classes):
         self.total_test_samples = np.sum(matrix[:, :])
+
+        self.TP = []
+        self.TN = []
+        self.FN = []
+        self.FP = []
 
         for each in classes:
             class_num = self.classes.index(each)
@@ -246,7 +244,7 @@ class ClassificationRandomForest:
         plt.legend(loc='lower right')
         plt.tight_layout()
         # plt.show()
-        plt.savefig("D:/Licenta/Interfata/resources/images/ROC_curve_RF.png", dpi=500)
+        plt.savefig("../results/ROC_curve_RF.png", dpi=500)
 
     def get_classes(self):
         return str(self.classes)
@@ -259,13 +257,15 @@ class ClassificationRandomForest:
 
 
 # clf = ClassificationRandomForest()
-# clf.set_data_path("D:/Licenta/complete_dataset")
+#
+# clf.set_data_path("../images/dataset")
 # clf.set_images_and_labels()
 # clf.encode_labels()
 # # print(str(clf.get_classes()))
 # clf.normalize_data()
 # clf.split_data()
 # clf.train()
+# clf.predict()
 # print("train acc:", clf.get_train_accuracy())
 # print("test acc:", clf.get_test_accuracy())
 # clf.generate_confusion_matrix()
