@@ -8,7 +8,6 @@ from sklearn import model_selection
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
-import pickle
 
 
 class ClassificationSVM:
@@ -35,10 +34,7 @@ class ClassificationSVM:
 
         self.total_test_samples = 0
 
-        self.TP = []
-        self.TN = []
-        self.FN = []
-        self.FP = []
+
 
         self.fpr = []
         self.tpr = []
@@ -80,15 +76,10 @@ class ClassificationSVM:
         # Training
         self.classification.fit(self.train_data, self.train_labels)
 
-        # Salvare model
-        pickle.dump(self.classification, open('D:/Licenta/Models/svm_model.sav', 'wb'))
 
     def get_train_accuracy(self):
         # Calcul acuratete pentru datele de antrenare
         return accuracy_score(self.train_labels, self.classification.predict(self.train_data))
-
-    def load_model(self):
-        self.classification = pickle.load(open('D:/Licenta/Models/svm_model.sav', 'rb'))
 
     def predict(self):
         # Testing
@@ -124,8 +115,8 @@ class ClassificationSVM:
         ax.set_xticks(np.arange(len(self.classes)))
         ax.set_yticks(np.arange(len(self.classes)))
 
-        ax.set_xticklabels(self.classes,  rotation=90, ha="right", rotation_mode="anchor")
-        ax.set_yticklabels(self.classes)
+        ax.set_xticklabels(range(len(self.classes)))
+        ax.set_yticklabels(range(len(self.classes)))
 
         ax.set_xlabel('Predicted labels')
         ax.set_ylabel('True labels')
@@ -146,11 +137,16 @@ class ClassificationSVM:
 
         # Ajustare automata a parametrilor figurii
         fig.tight_layout()
-        fig.savefig("D:/Licenta/Interfata/resources/images/confusion_matrix_SVM.png", dpi=500)
+        fig.savefig("../results/confusion_matrix_SVM.png", dpi=500)
         # plt.show()
 
     def get_values(self, matrix, classes):
         self.total_test_samples = np.sum(matrix[:, :])
+
+        self.TP = []
+        self.TN = []
+        self.FN = []
+        self.FP = []
 
         for each in classes:
             class_num = self.classes.index(each)
@@ -232,7 +228,7 @@ class ClassificationSVM:
         plt.legend(loc='lower right')
         plt.tight_layout()
         # plt.show()
-        plt.savefig("D:/Licenta/Interfata/resources/images/ROC_curve_SVM.png", dpi=500)
+        plt.savefig("../results/ROC_curve_SVM.png", dpi=500)
 
     def print_labels(self):
         return self.labels[4]
@@ -247,25 +243,26 @@ class ClassificationSVM:
         print(classification_report(self.test_labels, self.predicted_labels))
 
 
-clf = ClassificationSVM()
-clf.set_data_path("D:/Licenta/complete_dataset")
-clf.set_images_and_labels()
-clf.encode_labels()
-# print(str(clf.get_classes()))
-clf.reshape_and_normalize_data()
-clf.split_data()
-clf.train()
-print("train acc:", clf.get_train_accuracy())
-print("test acc:", clf.get_test_accuracy())
-clf.generate_confusion_matrix()
-clf.normalize_confusion_matrix()
-clf.plot_confusion_matrix()
-clf.get_values(clf.confusion_matrix, clf.classes)
-print(clf.confusion_matrix)
-print(clf.get_test_accuracy_oonf_matr())
-print(clf.get_test_recall_per_class())
-print(clf.get_test_precision_per_class())
-clf.calculate_fpr_tpr_th()
-clf.plot_ROC_curve()
+# clf = ClassificationSVM()
+# clf.set_data_path("../images/dataset")
+# clf.set_images_and_labels()
+# clf.encode_labels()
+# # print(str(clf.get_classes()))
+# clf.reshape_and_normalize_data()
+# clf.split_data()
+# clf.train()
+# clf.predict()
+# print("train acc:", clf.get_train_accuracy())
+# print("test acc:", clf.get_test_accuracy())
+# clf.generate_confusion_matrix()
+# clf.normalize_confusion_matrix()
+# clf.plot_confusion_matrix()
+# clf.get_values(clf.confusion_matrix, clf.classes)
+# print(clf.confusion_matrix)
+# print(clf.get_test_accuracy_oonf_matr())
+# print(clf.get_test_recall_per_class())
+# print(clf.get_test_precision_per_class())
+# clf.calculate_fpr_tpr_th()
+# clf.plot_ROC_curve()
 
-clf.class_rep()
+# clf.class_rep()
