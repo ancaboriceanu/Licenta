@@ -86,7 +86,7 @@ void cnn::on_confusionMatrixButton_clicked()
 {
     ui->resultsWidget->setCurrentIndex(2);
 
-    QPixmap confusionMatrix("D:/Licenta/Interfata/resources/images/confusion_matrix_CNN.png");
+    QPixmap confusionMatrix("D:/Licenta/Interfata/resources/results/confusion_matrix_CNN.png");
     confusionMatrix = confusionMatrix.scaled(QSize(700,700), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->confusionMatrixLabel->setPixmap(confusionMatrix);
 }
@@ -95,7 +95,7 @@ void cnn::on_RocCurveButton_clicked()
 {
     ui->resultsWidget->setCurrentIndex(3);
 
-    QPixmap rocCurve("D:/Licenta/Interfata/resources/images/ROC_curve_CNN.png");
+    QPixmap rocCurve("D:/Licenta/Interfata/resources/results/ROC_curve_CNN.png");
     rocCurve = rocCurve.scaled(QSize(700,700), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->rocCurveLabel->setPixmap(rocCurve);
 }
