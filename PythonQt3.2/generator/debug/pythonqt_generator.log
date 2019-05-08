@@ -1,0 +1,143 @@
+﻿Build started 27.06.2018 16:46:28.
+     1>Project "C:\Users\alba940\Downloads\PythonQt3.2\generator\pythonqt_generator.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         MOC fileout.h
+         MOC generator.h
+         MOC generatorset.h
+         MOC generatorsetqtscript.h
+         MOC prigenerator.h
+         MOC setupgenerator.h
+         MOC shellgenerator.h
+         MOC shellheadergenerator.h
+         MOC shellimplgenerator.h
+         RCC generator.qrc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I. /I. /I. /IC:/Users/alba940/Downloads/PythonQt3.2/generator/../common /Iparser /Iparser\rpp /Iparser\rpp /ID:\Qt\5.7\msvc2013_64\include /ID:\Qt\5.7\msvc2013_64\include\QtXml /ID:\Qt\5.7\msvc2013_64\include\QtCore /Idebug /I"D:\Qt\5.7\msvc2013_64\mkspecs\win32-msvc2013" /Zi /nologo /W3 /WX- /Od /D _CONSOLE /D UNICODE /D WIN32 /D WIN64 /D RXX_ALLOCATOR_INIT_0 /D QT_XML_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"debug\\" /Fd"debug\vc120.pdb" /Gd /TP /errorReport:prompt -w34100 -w34189 -w44996 abstractmetabuilder.cpp abstractmetalang.cpp parser\ast.cpp asttoxml.cpp parser\binder.cpp parser\class_compiler.cpp parser\codemodel.cpp parser\codemodel_finder.cpp parser\compiler_utils.cpp parser\control.cpp customtypes.cpp parser\declarator_compiler.cpp parser\default_visitor.cpp parser\dumptree.cpp fileout.cpp generator.cpp generatorset.cpp generatorsetqtscript.cpp parser\lexer.cpp parser\list.cpp main.cpp metajava.cpp metaqtscript.cpp metaqtscriptbuilder.cpp parser\name_compiler.cpp parser\parser.cpp parser\rpp\preprocessor.cpp prigenerator.cpp reporthandler.cpp setupgenerator.cpp shellgenerator.cpp shellheadergenerator.cpp shellimplgenerator.cpp parser\smallobject.cpp parser\tokens.cpp parser\type_compiler.cpp typeparser.cpp typesystem.cpp parser\visitor.cpp debug\moc_fileout.cpp debug\moc_generator.cpp debug\moc_generatorset.cpp debug\moc_generatorsetqtscript.cpp debug\moc_prigenerator.cpp debug\moc_setupgenerator.cpp debug\moc_shellgenerator.cpp debug\moc_shellheadergenerator.cpp debug\moc_shellimplgenerator.cpp debug\qrc_generator.cpp
+         abstractmetabuilder.cpp
+     1>abstractmetabuilder.cpp(747): warning C4100: 'meta_function' : unreferenced formal parameter
+     1>abstractmetabuilder.cpp(1937): warning C4100: 'type' : unreferenced formal parameter
+         abstractmetalang.cpp
+         ast.cpp
+     1>parser\ast.cpp(51): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         asttoxml.cpp
+         binder.cpp
+     1>parser\binder.cpp(783): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\binder.cpp(799): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         class_compiler.cpp
+         codemodel.cpp
+         codemodel_finder.cpp
+         compiler_utils.cpp
+         control.cpp
+         customtypes.cpp
+         declarator_compiler.cpp
+         default_visitor.cpp
+         dumptree.cpp
+         fileout.cpp
+         generator.cpp
+         generatorset.cpp
+         generatorsetqtscript.cpp
+         lexer.cpp
+         list.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+         metajava.cpp
+         metaqtscript.cpp
+         metaqtscriptbuilder.cpp
+         name_compiler.cpp
+         parser.cpp
+     1>parser\parser.cpp(1777): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\parser.cpp(1778): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\parser.cpp(4394): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\parser.cpp(4419): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\parser.cpp(4444): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         preprocessor.cpp
+     1>parser\rpp\preprocessor.cpp(124): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\rpp\preprocessor.cpp(139): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\rpp\preprocessor.cpp(141): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>parser\rpp\preprocessor.cpp(144): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         prigenerator.cpp
+     1>prigenerator.cpp(96): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         reporthandler.cpp
+         setupgenerator.cpp
+     1>setupgenerator.cpp(318): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         shellgenerator.cpp
+     1>shellgenerator.cpp(132): warning C4189: 'owner' : local variable is initialized but not referenced
+         shellheadergenerator.cpp
+         shellimplgenerator.cpp
+     1>shellimplgenerator.cpp(61): warning C4100: 's' : unreferenced formal parameter
+         smallobject.cpp
+         tokens.cpp
+         type_compiler.cpp
+         typeparser.cpp
+         typesystem.cpp
+         visitor.cpp
+         moc_fileout.cpp
+         Generating Code...
+         Compiling...
+         moc_generator.cpp
+         moc_generatorset.cpp
+         moc_generatorsetqtscript.cpp
+         moc_prigenerator.cpp
+         moc_setupgenerator.cpp
+         moc_shellgenerator.cpp
+         moc_shellheadergenerator.cpp
+         moc_shellimplgenerator.cpp
+         qrc_generator.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\pythonqt_generator.exe" /NOLOGO /LIBPATH:D:\Qt\5.7\msvc2013_64\lib D:\Qt\5.7\msvc2013_64\lib\Qt5Xmld.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"debug\pythonqt_generator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" debug\abstractmetabuilder.obj
+         debug\abstractmetalang.obj
+         debug\ast.obj
+         debug\asttoxml.obj
+         debug\binder.obj
+         debug\class_compiler.obj
+         debug\codemodel.obj
+         debug\codemodel_finder.obj
+         debug\compiler_utils.obj
+         debug\control.obj
+         debug\customtypes.obj
+         debug\declarator_compiler.obj
+         debug\default_visitor.obj
+         debug\dumptree.obj
+         debug\fileout.obj
+         debug\generator.obj
+         debug\generatorset.obj
+         debug\generatorsetqtscript.obj
+         debug\lexer.obj
+         debug\list.obj
+         debug\main.obj
+         debug\metajava.obj
+         debug\metaqtscript.obj
+         debug\metaqtscriptbuilder.obj
+         debug\name_compiler.obj
+         debug\parser.obj
+         debug\preprocessor.obj
+         debug\prigenerator.obj
+         debug\reporthandler.obj
+         debug\setupgenerator.obj
+         debug\shellgenerator.obj
+         debug\shellheadergenerator.obj
+         debug\shellimplgenerator.obj
+         debug\smallobject.obj
+         debug\tokens.obj
+         debug\type_compiler.obj
+         debug\typeparser.obj
+         debug\typesystem.obj
+         debug\visitor.obj
+         debug\moc_fileout.obj
+         debug\moc_generator.obj
+         debug\moc_generatorset.obj
+         debug\moc_generatorsetqtscript.obj
+         debug\moc_prigenerator.obj
+         debug\moc_setupgenerator.obj
+         debug\moc_shellgenerator.obj
+         debug\moc_shellheadergenerator.obj
+         debug\moc_shellimplgenerator.obj
+         debug\qrc_generator.obj
+         pythonqt_generator.vcxproj -> C:\Users\alba940\Downloads\PythonQt3.2\generator\debug\pythonqt_generator.exe
+     1>Done Building Project "C:\Users\alba940\Downloads\PythonQt3.2\generator\pythonqt_generator.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:36.26
