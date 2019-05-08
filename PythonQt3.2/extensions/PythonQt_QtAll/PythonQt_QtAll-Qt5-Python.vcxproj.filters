@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PythonQt_QtAll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui10.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_network\com_trolltech_qt_network0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_network\com_trolltech_qt_network1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_network\com_trolltech_qt_network_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_opengl\com_trolltech_qt_opengl0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_opengl\com_trolltech_qt_opengl_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_qml\com_trolltech_qt_qml0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_qml\com_trolltech_qt_qml_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_quick\com_trolltech_qt_quick0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_quick\com_trolltech_qt_quick1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_quick\com_trolltech_qt_quick_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_sql\com_trolltech_qt_sql0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_sql\com_trolltech_qt_sql_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_svg\com_trolltech_qt_svg0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_svg\com_trolltech_qt_svg_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_uitools\com_trolltech_qt_uitools0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_uitools\com_trolltech_qt_uitools_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_xml\com_trolltech_qt_xml0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_xml\com_trolltech_qt_xml1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_xml\com_trolltech_qt_xml_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_xmlpatterns\com_trolltech_qt_xmlpatterns0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp_56\com_trolltech_qt_xmlpatterns\com_trolltech_qt_xmlpatterns_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PythonQt_QtAll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core2.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_core\com_trolltech_qt_core3.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui10.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui11.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui12.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui2.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui3.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui4.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui5.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui6.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui7.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui8.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_gui\com_trolltech_qt_gui9.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia2.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_multimedia\com_trolltech_qt_multimedia3.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_network\com_trolltech_qt_network0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_network\com_trolltech_qt_network1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_opengl\com_trolltech_qt_opengl0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_qml\com_trolltech_qt_qml0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_quick\com_trolltech_qt_quick0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_quick\com_trolltech_qt_quick1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_sql\com_trolltech_qt_sql0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_svg\com_trolltech_qt_svg0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_uitools\com_trolltech_qt_uitools0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_xml\com_trolltech_qt_xml0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_xml\com_trolltech_qt_xml1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\generated_cpp_56\com_trolltech_qt_xmlpatterns\com_trolltech_qt_xmlpatterns0.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_com_trolltech_qt_core0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_core0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_core1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_core1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_core2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_core2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_core3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_core3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui10.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui10.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui11.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui11.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui12.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui12.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui4.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui4.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui5.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui5.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui6.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui6.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui7.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui7.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui8.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui8.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_gui9.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_gui9.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_multimedia0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_multimedia0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_multimedia1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_multimedia1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_multimedia2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_multimedia2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_multimedia3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_multimedia3.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_network0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_network0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_network1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_network1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_opengl0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_opengl0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_qml0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_qml0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_quick0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_quick0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_quick1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_quick1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_sql0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_sql0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_svg0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_svg0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_uitools0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_uitools0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_xml0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_xml0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_xml1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_xml1.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_com_trolltech_qt_xmlpatterns0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_com_trolltech_qt_xmlpatterns0.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\alba940\Downloads\PythonQt3.2\extensions\PythonQt_QtAll\PythonQt_QtAll-Qt5-Python_resource.rc" />
+  </ItemGroup>
+</Project>
