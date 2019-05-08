@@ -1,0 +1,41 @@
+﻿Build started 27.06.2018 16:57:28.
+     1>Project "C:\Users\alba940\Downloads\PythonQt3.2\src\PythonQt-Qt5-Python.vcxproj" on node 3 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\lib\\PythonQt-Qt5-Python3.dll" /VERSION:"3.2" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\Qt\5.7\msvc2013_64\lib D:\Qt\5.7\msvc2013_64\lib\Qt5Widgets.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Gui.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Core.lib C:\Python35\libs\python35.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"..\lib\PythonQt-Qt5-Python3.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /DLL "release\PythonQt-Qt5-Python_resource.res"
+         release\com_trolltech_qt_core_builtin0.obj
+         release\com_trolltech_qt_core_builtin_init.obj
+         release\com_trolltech_qt_gui_builtin0.obj
+         release\com_trolltech_qt_gui_builtin_init.obj
+         release\PythonQtScriptingConsole.obj
+         release\PythonQt.obj
+         release\PythonQtBoolResult.obj
+         release\PythonQtClassInfo.obj
+         release\PythonQtClassWrapper.obj
+         release\PythonQtConversion.obj
+         release\PythonQtImporter.obj
+         release\PythonQtInstanceWrapper.obj
+         release\PythonQtMethodInfo.obj
+         release\PythonQtMisc.obj
+         release\PythonQtObjectPtr.obj
+         release\PythonQtProperty.obj
+         release\PythonQtQFileImporter.obj
+         release\PythonQtSignal.obj
+         release\PythonQtSignalReceiver.obj
+         release\PythonQtSlot.obj
+         release\PythonQtSlotDecorator.obj
+         release\PythonQtStdDecorators.obj
+         release\PythonQtStdIn.obj
+         release\PythonQtStdOut.obj
+         release\moc_PythonQt.obj
+         release\moc_PythonQtScriptingConsole.obj
+         release\moc_PythonQtSignalReceiver.obj
+         release\moc_PythonQtStdDecorators.obj
+         release\moc_com_trolltech_qt_core_builtin0.obj
+         release\moc_com_trolltech_qt_gui_builtin0.obj
+            Creating library ..\lib\\PythonQt-Qt5-Python3.lib and object ..\lib\\PythonQt-Qt5-Python3.exp
+         PythonQt-Qt5-Python.vcxproj -> C:\Users\alba940\Downloads\PythonQt3.2\src\..\lib\PythonQt-Qt5-Python3.dll
+     1>Done Building Project "C:\Users\alba940\Downloads\PythonQt3.2\src\PythonQt-Qt5-Python.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.96
