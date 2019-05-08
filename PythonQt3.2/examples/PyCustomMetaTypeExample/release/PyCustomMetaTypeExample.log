@@ -1,0 +1,14 @@
+﻿Build started 27.06.2018 17:02:30.
+     1>Project "C:\Users\alba940\Downloads\PythonQt3.2\examples\PyCustomMetaTypeExample\PyCustomMetaTypeExample.vcxproj" on node 6 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\lib\\PyCustomMetaTypeExample.exe" /VERSION:"3.2" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\Qt\5.7\msvc2013_64\lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\utils\postgresql\pgsql\lib D:\Qt\5.7\msvc2013_64\lib\qtmain.lib shell32.lib "C:\Users\alba940\Downloads\PythonQt3.2\lib\PythonQt-Qt5-Python3.lib" D:\Qt\5.7\msvc2013_64\lib\Qt5Widgets.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Gui.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Core.lib C:\Python35\libs\python35.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"..\..\lib\PyCustomMetaTypeExample.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" release\PyCustomMetaTypeExample_resource.res
+         release\CustomObject.obj
+         release\main.obj
+         release\moc_CustomObject.obj
+         release\qrc_PyCustomMetaTypeExample.obj
+         PyCustomMetaTypeExample.vcxproj -> C:\Users\alba940\Downloads\PythonQt3.2\examples\PyCustomMetaTypeExample\..\..\lib\PyCustomMetaTypeExample.exe
+     1>Done Building Project "C:\Users\alba940\Downloads\PythonQt3.2\examples\PyCustomMetaTypeExample\PyCustomMetaTypeExample.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.44
