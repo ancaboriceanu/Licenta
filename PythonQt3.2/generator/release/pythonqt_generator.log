@@ -1,0 +1,58 @@
+﻿Build started 27.06.2018 16:57:28.
+     1>Project "C:\Users\alba940\Downloads\PythonQt3.2\generator\pythonqt_generator.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"release\\pythonqt_generator.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:D:\Qt\5.7\msvc2013_64\lib D:\Qt\5.7\msvc2013_64\lib\Qt5Xml.lib D:\Qt\5.7\msvc2013_64\lib\Qt5Core.lib C:\Python35\libs\python35.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"release\pythonqt_generator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" release\abstractmetabuilder.obj
+         release\abstractmetalang.obj
+         release\ast.obj
+         release\asttoxml.obj
+         release\binder.obj
+         release\class_compiler.obj
+         release\codemodel.obj
+         release\codemodel_finder.obj
+         release\compiler_utils.obj
+         release\control.obj
+         release\customtypes.obj
+         release\declarator_compiler.obj
+         release\default_visitor.obj
+         release\dumptree.obj
+         release\fileout.obj
+         release\generator.obj
+         release\generatorset.obj
+         release\generatorsetqtscript.obj
+         release\lexer.obj
+         release\list.obj
+         release\main.obj
+         release\metajava.obj
+         release\metaqtscript.obj
+         release\metaqtscriptbuilder.obj
+         release\name_compiler.obj
+         release\parser.obj
+         release\preprocessor.obj
+         release\prigenerator.obj
+         release\reporthandler.obj
+         release\setupgenerator.obj
+         release\shellgenerator.obj
+         release\shellheadergenerator.obj
+         release\shellimplgenerator.obj
+         release\smallobject.obj
+         release\tokens.obj
+         release\type_compiler.obj
+         release\typeparser.obj
+         release\typesystem.obj
+         release\visitor.obj
+         release\moc_fileout.obj
+         release\moc_generator.obj
+         release\moc_generatorset.obj
+         release\moc_generatorsetqtscript.obj
+         release\moc_prigenerator.obj
+         release\moc_setupgenerator.obj
+         release\moc_shellgenerator.obj
+         release\moc_shellheadergenerator.obj
+         release\moc_shellimplgenerator.obj
+         release\qrc_generator.obj
+         pythonqt_generator.vcxproj -> C:\Users\alba940\Downloads\PythonQt3.2\generator\release\pythonqt_generator.exe
+     1>Done Building Project "C:\Users\alba940\Downloads\PythonQt3.2\generator\pythonqt_generator.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.84
