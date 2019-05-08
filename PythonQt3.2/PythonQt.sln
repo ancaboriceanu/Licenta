@@ -1,0 +1,87 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pythonqt_generator", "generator\pythonqt_generator.vcxproj", "{95F38DD8-D5C0-3F11-A933-868D5FD8109C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PythonQt-Qt5-Python", "src\PythonQt-Qt5-Python.vcxproj", "{1F260FBE-2D74-3859-9C4A-6093D3805406}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PythonQt_QtAll-Qt5-Python", "extensions\PythonQt_QtAll\PythonQt_QtAll-Qt5-Python.vcxproj", "{1DDC7079-9851-34F4-86B8-D923F73B9763}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PythonQtTest", "tests\PythonQtTest.vcxproj", "{68EEF9C4-95AF-3603-B681-48D115ADC252}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPPyWrapperExample", "examples\CPPPyWrapperExample\CPPPyWrapperExample.vcxproj", "{FA26D7C3-FCFE-37E8-82C4-321E5648C8D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyGettingStarted", "examples\PyGettingStarted\PyGettingStarted.vcxproj", "{7BCFD9BB-5C05-3AEE-AB59-B022DFE89C8B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyCPPWrapperExample", "examples\PyCPPWrapperExample\PyCPPWrapperExample.vcxproj", "{CC398C32-DC62-3AF5-8AD1-798D74526B4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyCustomMetaTypeExample", "examples\PyCustomMetaTypeExample\PyCustomMetaTypeExample.vcxproj", "{FBC4F192-58FB-39B5-AE1E-53032815447B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyGuiExample", "examples\PyGuiExample\PyGuiExample.vcxproj", "{D9A978A9-C288-38C7-9C79-AFC365F28248}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyDecoratorsExample", "examples\PyDecoratorsExample\PyDecoratorsExample.vcxproj", "{8CA7D1A6-EC09-373C-B535-D7F9715311C8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyScriptingConsole", "examples\PyScriptingConsole\PyScriptingConsole.vcxproj", "{39642A18-2D78-3F35-B34A-BF8CB9730CDD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PyLauncher", "examples\PyLauncher\PyLauncher.vcxproj", "{258F2FB6-3A9D-36BB-B6DA-E21CEBE89FF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95F38DD8-D5C0-3F11-A933-868D5FD8109C}.Debug|x64.ActiveCfg = Debug|x64
+		{95F38DD8-D5C0-3F11-A933-868D5FD8109C}.Debug|x64.Build.0 = Debug|x64
+		{95F38DD8-D5C0-3F11-A933-868D5FD8109C}.Release|x64.ActiveCfg = Release|x64
+		{95F38DD8-D5C0-3F11-A933-868D5FD8109C}.Release|x64.Build.0 = Release|x64
+		{1F260FBE-2D74-3859-9C4A-6093D3805406}.Debug|x64.ActiveCfg = Debug|x64
+		{1F260FBE-2D74-3859-9C4A-6093D3805406}.Debug|x64.Build.0 = Debug|x64
+		{1F260FBE-2D74-3859-9C4A-6093D3805406}.Release|x64.ActiveCfg = Release|x64
+		{1F260FBE-2D74-3859-9C4A-6093D3805406}.Release|x64.Build.0 = Release|x64
+		{1DDC7079-9851-34F4-86B8-D923F73B9763}.Debug|x64.ActiveCfg = Debug|x64
+		{1DDC7079-9851-34F4-86B8-D923F73B9763}.Debug|x64.Build.0 = Debug|x64
+		{1DDC7079-9851-34F4-86B8-D923F73B9763}.Release|x64.ActiveCfg = Release|x64
+		{1DDC7079-9851-34F4-86B8-D923F73B9763}.Release|x64.Build.0 = Release|x64
+		{68EEF9C4-95AF-3603-B681-48D115ADC252}.Debug|x64.ActiveCfg = Debug|x64
+		{68EEF9C4-95AF-3603-B681-48D115ADC252}.Debug|x64.Build.0 = Debug|x64
+		{68EEF9C4-95AF-3603-B681-48D115ADC252}.Release|x64.ActiveCfg = Release|x64
+		{68EEF9C4-95AF-3603-B681-48D115ADC252}.Release|x64.Build.0 = Release|x64
+		{FA26D7C3-FCFE-37E8-82C4-321E5648C8D7}.Debug|x64.ActiveCfg = Debug|x64
+		{FA26D7C3-FCFE-37E8-82C4-321E5648C8D7}.Debug|x64.Build.0 = Debug|x64
+		{FA26D7C3-FCFE-37E8-82C4-321E5648C8D7}.Release|x64.ActiveCfg = Release|x64
+		{FA26D7C3-FCFE-37E8-82C4-321E5648C8D7}.Release|x64.Build.0 = Release|x64
+		{7BCFD9BB-5C05-3AEE-AB59-B022DFE89C8B}.Debug|x64.ActiveCfg = Debug|x64
+		{7BCFD9BB-5C05-3AEE-AB59-B022DFE89C8B}.Debug|x64.Build.0 = Debug|x64
+		{7BCFD9BB-5C05-3AEE-AB59-B022DFE89C8B}.Release|x64.ActiveCfg = Release|x64
+		{7BCFD9BB-5C05-3AEE-AB59-B022DFE89C8B}.Release|x64.Build.0 = Release|x64
+		{CC398C32-DC62-3AF5-8AD1-798D74526B4B}.Debug|x64.ActiveCfg = Debug|x64
+		{CC398C32-DC62-3AF5-8AD1-798D74526B4B}.Debug|x64.Build.0 = Debug|x64
+		{CC398C32-DC62-3AF5-8AD1-798D74526B4B}.Release|x64.ActiveCfg = Release|x64
+		{CC398C32-DC62-3AF5-8AD1-798D74526B4B}.Release|x64.Build.0 = Release|x64
+		{FBC4F192-58FB-39B5-AE1E-53032815447B}.Debug|x64.ActiveCfg = Debug|x64
+		{FBC4F192-58FB-39B5-AE1E-53032815447B}.Debug|x64.Build.0 = Debug|x64
+		{FBC4F192-58FB-39B5-AE1E-53032815447B}.Release|x64.ActiveCfg = Release|x64
+		{FBC4F192-58FB-39B5-AE1E-53032815447B}.Release|x64.Build.0 = Release|x64
+		{D9A978A9-C288-38C7-9C79-AFC365F28248}.Debug|x64.ActiveCfg = Debug|x64
+		{D9A978A9-C288-38C7-9C79-AFC365F28248}.Debug|x64.Build.0 = Debug|x64
+		{D9A978A9-C288-38C7-9C79-AFC365F28248}.Release|x64.ActiveCfg = Release|x64
+		{D9A978A9-C288-38C7-9C79-AFC365F28248}.Release|x64.Build.0 = Release|x64
+		{8CA7D1A6-EC09-373C-B535-D7F9715311C8}.Debug|x64.ActiveCfg = Debug|x64
+		{8CA7D1A6-EC09-373C-B535-D7F9715311C8}.Debug|x64.Build.0 = Debug|x64
+		{8CA7D1A6-EC09-373C-B535-D7F9715311C8}.Release|x64.ActiveCfg = Release|x64
+		{8CA7D1A6-EC09-373C-B535-D7F9715311C8}.Release|x64.Build.0 = Release|x64
+		{39642A18-2D78-3F35-B34A-BF8CB9730CDD}.Debug|x64.ActiveCfg = Debug|x64
+		{39642A18-2D78-3F35-B34A-BF8CB9730CDD}.Debug|x64.Build.0 = Debug|x64
+		{39642A18-2D78-3F35-B34A-BF8CB9730CDD}.Release|x64.ActiveCfg = Release|x64
+		{39642A18-2D78-3F35-B34A-BF8CB9730CDD}.Release|x64.Build.0 = Release|x64
+		{258F2FB6-3A9D-36BB-B6DA-E21CEBE89FF7}.Debug|x64.ActiveCfg = Debug|x64
+		{258F2FB6-3A9D-36BB-B6DA-E21CEBE89FF7}.Debug|x64.Build.0 = Debug|x64
+		{258F2FB6-3A9D-36BB-B6DA-E21CEBE89FF7}.Release|x64.ActiveCfg = Release|x64
+		{258F2FB6-3A9D-36BB-B6DA-E21CEBE89FF7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
