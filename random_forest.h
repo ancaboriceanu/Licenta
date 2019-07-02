@@ -31,7 +31,7 @@ class random_forest : public QWidget
     Q_OBJECT
 
 public:
-    explicit random_forest(QWidget *parent = 0, QString dataPath = "");
+    explicit random_forest(QWidget *parent = nullptr, QString dataPath = "");
     ~random_forest();
 
 signals:

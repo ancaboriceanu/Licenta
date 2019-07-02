@@ -32,7 +32,7 @@ class svm : public QWidget
 
 
 public:
-    explicit svm(QWidget *parent = 0, QString dataPath = "");
+    explicit svm(QWidget *parent = nullptr, QString dataPath = "");
     ~svm();
 
 signals:

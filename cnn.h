@@ -32,7 +32,7 @@ class cnn : public QWidget
 
 
 public:
-    explicit cnn(QWidget *parent = 0, QString dataPath = "");
+    explicit cnn(QWidget *parent = nullptr, QString dataPath = "");
     ~cnn();
 
 signals:
@@ -49,22 +49,15 @@ private slots:
     void updateTestFinished();
     void on_backButton_clicked();
     void on_compareButton_clicked();
-
     void on_confusionMatrixButton_clicked();
-
     void on_RocCurveButton_clicked();
-
     void on_showResultsButton_clicked();
     void updatePlot();
     void setResults(float testAcc, QList<float> recall, QList<float> precision, QStringList classes);
     void on_accuracyButton_clicked();
-
     void on_precRecallButton_clicked();
-
     void showValue(bool status,int index, QBarSet *barSet);
-
     void on_trainRadioButton_clicked();
-
     void on_testRadioButton_clicked();
 
 private:
@@ -84,9 +77,7 @@ private:
     QStringList m_classes;
 
     QThread* classificationThread;
-        ConvolutionalNeuralNetworksClassification* cnnClassification;
-
-
+    ConvolutionalNeuralNetworksClassification* cnnClassification;
 
 };
 

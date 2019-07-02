@@ -19,19 +19,16 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
-
 private slots:
-    void setup();
     void goToCnn(QString dataPath);
     void goToSvm(QString dataPath);
     void goToRf(QString dataPath);
     void goBack();
     void compare(QStringList classes);
-
+    void createNew();
 
 private:
     Ui::MainWindow *ui;

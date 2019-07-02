@@ -290,140 +290,188 @@ font:bold;</string>
       </layout>
      </item>
      <item>
-      <widget class="QStackedWidget" name="resultsWidget">
-       <property name="minimumSize">
-        <size>
-         <width>650</width>
-         <height>600</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>1030</width>
-         <height>700</height>
-        </size>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <widget class="QWidget" name="accPage">
-        <widget class="QWidget" name="horizontalLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>-1</x>
-           <y>-1</y>
-           <width>1031</width>
-           <height>601</height>
-          </rect>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="resultsWidget">
+         <property name="minimumSize">
+          <size>
+           <width>650</width>
+           <height>500</height>
+          </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QWidget" name="widget_2" native="true">
-            <property name="maximumSize">
-             <size>
-              <width>520</width>
-              <height>600</height>
-             </size>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>511</width>
-               <height>601</height>
-              </rect>
+         <property name="maximumSize">
+          <size>
+           <width>1030</width>
+           <height>500</height>
+          </size>
+         </property>
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <widget class="QWidget" name="accPage">
+          <widget class="QWidget" name="horizontalLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>-1</x>
+             <y>-1</y>
+             <width>1031</width>
+             <height>601</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QWidget" name="widget_2" native="true">
+              <property name="maximumSize">
+               <size>
+                <width>520</width>
+                <height>600</height>
+               </size>
+              </property>
+              <widget class="QWidget" name="gridLayoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>511</width>
+                 <height>601</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="trainGridLayout"/>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <property name="maximumSize">
+               <size>
+                <width>520</width>
+                <height>600</height>
+               </size>
+              </property>
+              <widget class="QWidget" name="gridLayoutWidget_5">
+               <property name="geometry">
+                <rect>
+                 <x>-1</x>
+                 <y>-1</y>
+                 <width>511</width>
+                 <height>601</height>
+                </rect>
+               </property>
+               <layout class="QGridLayout" name="testGridLayout"/>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="precRecallPage">
+          <widget class="QWidget" name="gridLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1021</width>
+             <height>601</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="precRecallGridLayout"/>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="confusionMatrixPage">
+          <widget class="QWidget" name="gridLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1021</width>
+             <height>601</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="confusionMatrixLabel">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="rocCurvePage">
+          <widget class="QWidget" name="gridLayoutWidget_4">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>-1</y>
+             <width>1021</width>
+             <height>601</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="rocCurveLabel">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="wait">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <family>Seagoe UI</family>
+               <pointsize>-1</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
              </property>
-             <layout class="QGridLayout" name="trainGridLayout"/>
-            </widget>
-           </widget>
-          </item>
-          <item>
-           <widget class="QWidget" name="widget" native="true">
-            <property name="maximumSize">
-             <size>
-              <width>520</width>
-              <height>600</height>
-             </size>
-            </property>
-            <widget class="QWidget" name="gridLayoutWidget_5">
-             <property name="geometry">
-              <rect>
-               <x>-1</x>
-               <y>-1</y>
-               <width>511</width>
-               <height>601</height>
-              </rect>
+             <property name="styleSheet">
+              <string notr="true">font:30px;</string>
              </property>
-             <layout class="QGridLayout" name="testGridLayout"/>
+             <property name="text">
+              <string>Wait for the images to be processed...</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
-           </widget>
-          </item>
-         </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="styleSheet">
+              <string notr="true">font:30px;</string>
+             </property>
+             <property name="text">
+              <string>Wait for training...</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2"/>
         </widget>
-       </widget>
-       <widget class="QWidget" name="precRecallPage">
-        <widget class="QWidget" name="gridLayoutWidget_2">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>1021</width>
-           <height>601</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="precRecallGridLayout"/>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="confusionMatrixPage">
-        <widget class="QWidget" name="gridLayoutWidget_3">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>0</y>
-           <width>1021</width>
-           <height>601</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="0" column="0">
-           <widget class="QLabel" name="confusionMatrixLabel">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="rocCurvePage">
-        <widget class="QWidget" name="gridLayoutWidget_4">
-         <property name="geometry">
-          <rect>
-           <x>9</x>
-           <y>-1</y>
-           <width>1021</width>
-           <height>601</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0">
-           <widget class="QLabel" name="rocCurveLabel">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>

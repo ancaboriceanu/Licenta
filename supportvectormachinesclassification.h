@@ -5,28 +5,28 @@
 #include <PythonQt.h>
 #include <QThread>
 #include <QList>
+#include <Classification.h>
 
-class SupportVectorMachinesClassification : public QObject
+class SupportVectorMachinesClassification : public QObject, public Classification
 {
     Q_OBJECT
-public:
-    explicit SupportVectorMachinesClassification(QObject *parent = 0);
+    Q_INTERFACES(Classification)
 
+public:
+    explicit SupportVectorMachinesClassification(QObject *parent = nullptr);
 public:
     void setPath(QString dataPath);
 
 signals:
     void donePreprocessing();
-    void finished();
-    void svmResults(float trainAcc, float testAcc, QList<float> recall, QList<float> precision, QStringList classes);
+    void trainFinished();
+    void results(float trainAcc, float testAcc, QList<float> recall, QList<float> precision, QStringList classes);
 
 public slots:
     void process();
     void train();
+    void test(){}
 
-private:
-    QList<float> convertString(QString string);
-    QStringList splitString(QString string);
 
 private:
     QString m_dataPath;

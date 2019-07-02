@@ -38,7 +38,7 @@ class final : public QWidget
     Q_OBJECT
 
 public:
-    explicit final(QWidget *parent = 0, QStringList classes = {});
+    explicit final(QWidget *parent = nullptr, QStringList classes = {});
     ~final();
 
 signals:

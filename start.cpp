@@ -116,3 +116,5 @@ void start::showNextButton()
     ui->nextButton_start->setEnabled(true);
 }
 
+
+

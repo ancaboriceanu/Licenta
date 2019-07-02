@@ -14,7 +14,7 @@ class start : public QWidget
     Q_OBJECT
 
 public:
-    explicit start(QWidget *parent = 0);
+    explicit start(QWidget *parent = nullptr);
     ~start();
 
 private slots:

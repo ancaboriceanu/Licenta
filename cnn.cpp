@@ -25,6 +25,8 @@ cnn::cnn(QWidget *parent, QString dataPath) :
 {
     ui->setupUi(this);
 
+    ui->trainProgressBar->setValue(0);
+
     classificationThread = new QThread();
     cnnClassification = new ConvolutionalNeuralNetworksClassification();
 
@@ -34,9 +36,10 @@ cnn::cnn(QWidget *parent, QString dataPath) :
 
     connect(this, SIGNAL(startTrainingClicked()), cnnClassification, SLOT(train()));
 
-    connect(classificationThread, SIGNAL(started()), this, SLOT(initialization()));
 
     connect(this, SIGNAL(startTrainingClicked()), this, SLOT(updateStartTraining()));
+   // connect(m_timer, SIGNAL(timeout()), this, SLOT(updatePlot()));
+
 
     connect(cnnClassification, SIGNAL(trainFinished()), this, SLOT(updateTrainFinished()));
 
@@ -47,7 +50,7 @@ cnn::cnn(QWidget *parent, QString dataPath) :
     connect(this, SIGNAL(startTestingClicked()), this, SLOT(updateStartTesting()));
 
     connect(cnnClassification, SIGNAL(testFinished()), this, SLOT(updateTestFinished()));
-    connect(cnnClassification, SIGNAL(cnnResults(float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, QList<float>, QList<float>, QStringList)));
+    connect(cnnClassification, SIGNAL(results(float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, QList<float>, QList<float>, QStringList)));
 
 
     connect(cnnClassification, SIGNAL(testFinished()), classificationThread, SLOT(quit()));
@@ -67,11 +70,11 @@ void cnn::initialization()
 {
     ui->stackedWidget->setVisible(false);
     ui->trainProgressBar->setValue(0);
-    ui->trainProgressBar->setVisible(false);
+    //ui->trainProgressBar->setVisible(false);
     ui->showResultsButton->setEnabled(false);
     ui->valueLabel->setVisible(false);
 
-//    QPixmap wait("C:/Users/ancab/Desktop");
+//    QPixmap wait("C:/Users/ancab/Desktop/reload.png");
 //    wait = wait.scaled(QSize(500,500), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 //    ui->waitLabel->setPixmap(wait);
 
@@ -80,11 +83,12 @@ void cnn::initialization()
 
 void cnn::updateStartTraining()
 {
+
     m_timer = new QTimer(this);
     connect(m_timer, SIGNAL(timeout()), this, SLOT(updatePlot()));
     m_timer->start(25);
 
-    ui->trainProgressBar->setVisible(true);
+    //ui->trainProgressBar->setVisible(true);
     ui->trainProgressBar->setMinimum(0);
     ui->trainProgressBar->setMaximum(0);
     ui->testRadioButton->setEnabled(false);
@@ -95,7 +99,7 @@ void cnn::updateStartTraining()
 
 void cnn::updateStartTesting()
 {
-    ui->trainProgressBar->setVisible(true);
+    //ui->trainProgressBar->setVisible(true);
     ui->trainProgressBar->setMinimum(0);
     ui->trainProgressBar->setMaximum(0);
     ui->trainRadioButton->setEnabled(false);
@@ -247,7 +251,7 @@ void cnn::updatePlot()
     chart->addSeries(accSeries);
 
     QValueAxis *axisY = new QValueAxis;
-    axisY->setRange(0,1);
+    axisY->setRange(0,3);
     axisY->setTickCount(11);
     axisY->setLabelFormat("%.2f");
     axisY->setTitleText("Loss, Accuracy");
@@ -381,11 +385,11 @@ void cnn::plotAccuracy()
     QPieSlice *trainSlice1 = trainSeries->slices().at(0);
 
     trainSlice1->setBorderWidth(0);
-    trainSlice1->setBorderColor(Qt::darkCyan);
-    trainSlice1->setBrush(Qt::cyan);
+    trainSlice1->setBorderColor(Qt::darkGreen);
+    trainSlice1->setBrush(Qt::green);
 
     trainSlice1->setLabelVisible();
-    trainSlice1->setLabelBrush(Qt::darkCyan);
+    trainSlice1->setLabelBrush(Qt::darkGreen);
     trainSeries->setLabelsPosition(QPieSlice::LabelInsideHorizontal);
     trainSlice1->setLabel(QString("%1%").arg(100*trainSlice1->percentage(), 0, 'f', 1));
     QPieSlice *trainSlice2 = trainSeries->slices().at(1);
@@ -393,14 +397,14 @@ void cnn::plotAccuracy()
 
     if(m_trainAcc == 1)
     {
-        trainSlice2->setBrush(Qt::cyan);
-        trainSlice2->setBorderColor(Qt::cyan);
+        trainSlice2->setBrush(Qt::green);
+        trainSlice2->setBorderColor(Qt::green);
 
     }
     else
     {
-        trainSlice2->setBrush(Qt::darkCyan);
-        trainSlice2->setBorderColor(Qt::darkCyan);
+        trainSlice2->setBrush(Qt::darkGreen);
+        trainSlice2->setBorderColor(Qt::darkGreen);
 
     }
 
@@ -410,25 +414,25 @@ void cnn::plotAccuracy()
 
     QPieSlice *testSlice1 = testSeries->slices().at(0);
     testSlice1->setBorderWidth(0);
-    testSlice1->setBorderColor(Qt::darkCyan);
-    testSlice1->setBrush(Qt::cyan);
+    testSlice1->setBorderColor(Qt::darkGreen);
+    testSlice1->setBrush(Qt::green);
     testSlice1->setLabelVisible();
-    testSlice1->setLabelBrush(Qt::darkCyan);
+    testSlice1->setLabelBrush(Qt::darkGreen);
     testSeries->setLabelsPosition(QPieSlice::LabelInsideHorizontal);
     testSlice1->setLabel(QString("%1%").arg(100*testSlice1->percentage(), 0, 'f', 1));
     QPieSlice *testSlice2 = testSeries->slices().at(1);
     testSlice2->setBorderWidth(0);
-    testSlice2->setBorderColor(Qt::cyan);
+    testSlice2->setBorderColor(Qt::green);
 
     if(m_testAcc == 1)
     {
-        testSlice2->setBrush(Qt::cyan);
-        testSlice2->setBorderColor(Qt::cyan);
+        testSlice2->setBrush(Qt::green);
+        testSlice2->setBorderColor(Qt::green);
     }
     else
     {
-        testSlice2->setBrush(Qt::darkCyan);
-        testSlice2->setBorderColor(Qt::darkCyan);
+        testSlice2->setBrush(Qt::darkGreen);
+        testSlice2->setBorderColor(Qt::darkGreen);
     }
 
     QChart *trainChart = new QChart();

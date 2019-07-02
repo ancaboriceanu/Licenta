@@ -27,11 +27,11 @@ svm::svm(QWidget *parent, QString dataPath) :
     connect(this, SIGNAL(startTrainingClicked()), svmClassification, SLOT(train()));
     connect(this, SIGNAL(startTrainingClicked()), this, SLOT(updateStartTraining()));
 
-    connect(svmClassification, SIGNAL(finished()), this, SLOT(updateFinished()));
-    connect(svmClassification, SIGNAL(svmResults(float, float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, float, QList<float>, QList<float>, QStringList)));
+    connect(svmClassification, SIGNAL(trainFinished()), this, SLOT(updateFinished()));
+    connect(svmClassification, SIGNAL(results(float, float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, float, QList<float>, QList<float>, QStringList)));
 
-    connect(svmClassification, SIGNAL(finished()), classificationThread, SLOT(quit()));
-    connect(svmClassification, SIGNAL(finished()), svmClassification, SLOT(deleteLater()));
+    connect(svmClassification, SIGNAL(trainFinished()), classificationThread, SLOT(quit()));
+    connect(svmClassification, SIGNAL(trainFinished()), svmClassification, SLOT(deleteLater()));
     connect(classificationThread, SIGNAL(finished()), classificationThread, SLOT(deleteLater()));
 
     classificationThread->start();
@@ -51,11 +51,13 @@ void svm::initialization()
     ui->startTrainingButton->setEnabled(false);
     ui->showResultsButton->setEnabled(false);
     ui->valueLabel->setVisible(false);
+    ui->resultsWidget->setCurrentIndex(4);
 
 }
 
 void svm::updatePreprocessingFinished()
 {
+    ui->resultsWidget->setCurrentIndex(6);
     ui->preprocessProgressBar->setMaximum(100);
     ui->preprocessProgressBar->setValue(100);
     ui->startTrainingButton->setEnabled(true);
@@ -63,12 +65,15 @@ void svm::updatePreprocessingFinished()
 
 void svm::updateStartTraining()
 {
+    ui->resultsWidget->setCurrentIndex(5);
+
     ui->trainProgressBar->setMinimum(0);
     ui->trainProgressBar->setMaximum(0);
 }
 
 void svm::updateFinished()
 {
+    ui->resultsWidget->setCurrentIndex(6);
     ui->trainProgressBar->setMaximum(100);
     ui->trainProgressBar->setValue(100);
     ui->showResultsButton->setEnabled(true);
@@ -95,7 +100,7 @@ void svm::on_confusionMatrixButton_clicked()
     ui->valueLabel->setVisible(false);
 
     QPixmap confusionMatrix(":/resources/results/confusion_matrix_SVM.png");
-    confusionMatrix = confusionMatrix.scaled(QSize(700,700), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    confusionMatrix = confusionMatrix.scaled(QSize(600,600), Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->confusionMatrixLabel->setPixmap(confusionMatrix);
 }
 
@@ -282,7 +287,7 @@ void svm::on_showResultsButton_clicked()
     ui->precRecallButton->setEnabled(true);
     ui->confusionMatrixButton->setEnabled(true);
     ui->RocCurveButton->setEnabled(true);
-
+    ui->resultsWidget->show();
 
     plotPrecisionRecall();
     plotAccuracy();

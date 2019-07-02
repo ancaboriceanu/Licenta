@@ -27,11 +27,11 @@ final::final(QWidget *parent, QStringList classes) :
 
     m_classes = classes;
 
-    ui->backToolButton->setIcon(QIcon("C:/Users/ancab/Desktop/left.png"));
+    ui->backToolButton->setIcon(QIcon("D:/Licenta/Interfata/resources/other_images/left.png"));
     ui->backToolButton->setIconSize(QSize(25,25));
-    ui->nextToolButton->setIcon(QIcon("C:/Users/ancab/Desktop/right.png"));
+    ui->nextToolButton->setIcon(QIcon("D:/Licenta/Interfata/resources/other_images/right.png"));
     ui->nextToolButton->setIconSize(QSize(25,25));
-    ui->homeToolButton->setIcon(QIcon("C:/Users/ancab/Desktop/home.png"));
+    ui->homeToolButton->setIcon(QIcon("D:/Licenta/Interfata/resources/other_images/home.png"));
     ui->homeToolButton->setIconSize(QSize(25,25));
 
 
@@ -55,6 +55,7 @@ final::~final()
 
 void final::plotAccuracy()
 {
+    ui->label_2->setText("Accuracy");
     ui->evaluationWidget->setCurrentIndex(0);
 
     QPieSeries *cnnSeries = new QPieSeries();
@@ -126,6 +127,7 @@ void final::plotAccuracy()
 
 void final::createTable()
 {
+
     ui->metricsTable->setRowCount(9);
     ui->metricsTable->setColumnCount(8);
 
@@ -163,8 +165,8 @@ void final::createTable()
 
     for(int i = 0; i < m_classes.length(); i++)
     {
-        ui->metricsTable->setItem(i+3, 2, new QTableWidgetItem(QString::number(m_cnnResults.at(1).at(i), 'f', 2)));
-        ui->metricsTable->setItem(i+3, 5, new QTableWidgetItem(QString::number(m_cnnResults.at(2).at(i), 'f', 2)));
+        ui->metricsTable->setItem(i+3, 2, new QTableWidgetItem(QString::number(m_cnnResults.at(2).at(i), 'f', 2)));
+        ui->metricsTable->setItem(i+3, 5, new QTableWidgetItem(QString::number(m_cnnResults.at(3).at(i), 'f', 2)));
 
         ui->metricsTable->setItem(i+3, 3, new QTableWidgetItem(QString::number(m_svmResults.at(1).at(i), 'f', 2)));
         ui->metricsTable->setItem(i+3, 6, new QTableWidgetItem(QString::number(m_svmResults.at(2).at(i), 'f', 2)));
@@ -194,7 +196,7 @@ void final::createTable()
 
 void final::plotTime()
 {
-    QBarSet *set = new QBarSet("Test Time");
+    QBarSet *set = new QBarSet("Training Time");
 
     *set << m_cnnResults.at(0).at(0) / 60 << m_svmResults.at(0).at(0) / 60 << m_rfResults.at(0).at(0) / 60;
 
@@ -271,10 +273,14 @@ void final::on_nextToolButton_clicked()
     if(ui->evaluationWidget->currentIndex() == 0)
     {
         ui->evaluationWidget->setCurrentIndex(1);
+        ui->label_2->setText("Metrics");
+
     }
     else if (ui->evaluationWidget->currentIndex() == 1)
     {
         ui->evaluationWidget->setCurrentIndex(2);
+        ui->label_2->setText("Training Time");
+
     }
 }
 
@@ -283,10 +289,15 @@ void final::on_backToolButton_clicked()
     if(ui->evaluationWidget->currentIndex() == 1)
     {
         ui->evaluationWidget->setCurrentIndex(0);
+        ui->label_2->setText("Accuracy");
+
+
     }
     else if (ui->evaluationWidget->currentIndex() == 2)
     {
         ui->evaluationWidget->setCurrentIndex(1);
+        ui->label_2->setText("Metrics");
+
     }
 }
 

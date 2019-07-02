@@ -29,10 +29,10 @@ random_forest::random_forest(QWidget *parent, QString dataPath) :
     connect(this, SIGNAL(startTrainingClicked()), randomForestClassification, SLOT(train()));
     connect(this, SIGNAL(startTrainingClicked()), this, SLOT(updateStartTraining()));
 
-    connect(randomForestClassification, SIGNAL(finished()), this, SLOT(updateFinished()));
-    connect(randomForestClassification, SIGNAL(randomForestResults(float, float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, float, QList<float>, QList<float>, QStringList)));
-    connect(randomForestClassification, SIGNAL(finished()), classificationThread, SLOT(quit()));
-    connect(randomForestClassification, SIGNAL(finished()), randomForestClassification, SLOT(deleteLater()));
+    connect(randomForestClassification, SIGNAL(trainFinished()), this, SLOT(updateFinished()));
+    connect(randomForestClassification, SIGNAL(results(float, float, QList<float>, QList<float>, QStringList)), this, SLOT(setResults(float, float, QList<float>, QList<float>, QStringList)));
+    connect(randomForestClassification, SIGNAL(trainFinished()), classificationThread, SLOT(quit()));
+    connect(randomForestClassification, SIGNAL(trainFinished()), randomForestClassification, SLOT(deleteLater()));
     connect(classificationThread, SIGNAL(finished()), classificationThread, SLOT(deleteLater()));
 
     classificationThread->start();
@@ -62,6 +62,8 @@ void random_forest::initialization()
     ui->startTrainingButton->setEnabled(true);
     ui->showResultsButton->setEnabled(false);
     ui->valueLabel->setVisible(false);
+    ui->resultsWidget->setCurrentIndex(4);
+
 
 //    QPixmap wait("C:/Users/ancab/Desktop");
 //    wait = wait.scaled(QSize(500,500), Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -75,6 +77,7 @@ void random_forest::on_startTrainingButton_clicked()
 
 void random_forest::updatePreprocessingFinished()
 {
+    ui->resultsWidget->setCurrentIndex(6);
     ui->preprocessProgressBar->setMaximum(100);
     ui->preprocessProgressBar->setValue(100);
     ui->startTrainingButton->setEnabled(true);
@@ -82,12 +85,14 @@ void random_forest::updatePreprocessingFinished()
 
 void random_forest::updateStartTraining()
 {
+    ui->resultsWidget->setCurrentIndex(5);
     ui->trainProgressBar->setMinimum(0);
     ui->trainProgressBar->setMaximum(0);
 }
 
 void random_forest::updateFinished()
 {
+    ui->resultsWidget->setCurrentIndex(6);
     ui->trainProgressBar->setMaximum(100);
     ui->trainProgressBar->setValue(100);
     ui->showResultsButton->setEnabled(true);

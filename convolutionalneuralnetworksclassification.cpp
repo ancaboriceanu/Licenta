@@ -1,5 +1,5 @@
 #include "convolutionalneuralnetworksclassification.h"
-
+#include "formatstring.h"
 ConvolutionalNeuralNetworksClassification::ConvolutionalNeuralNetworksClassification(QObject *parent) : QObject(parent)
 {
 
@@ -26,100 +26,67 @@ void ConvolutionalNeuralNetworksClassification::train()
 
     PythonQt::init(PythonQt::ExternalHelp || PythonQt::RedirectStdOut);
 
-    PythonQtObjectPtr mainContext;
-    PythonQtObjectPtr tag;
+    m_mainContext = PythonQt::self()->getMainModule();
+    m_mainContext.evalFile(":/resources/python/classification_cnn.py");
+    m_tag = m_mainContext.evalScript("ClassificationCNN()\n", Py_eval_input);
 
-    mainContext = PythonQt::self()->getMainModule();
-    mainContext.evalFile(":/resources/python/classification_cnn.py");
-    tag = mainContext.evalScript("ClassificationCNN()\n", Py_eval_input);
+    m_tag.call("set_data_path", QVariantList() << m_dataPath);
+    m_tag.call("set_generators", QVariantList());
+    m_tag.call("create_model", QVariantList());
 
-    tag.call("set_data_path", QVariantList() << m_dataPath);
-    tag.call("set_generators", QVariantList());
-    tag.call("create_model", QVariantList());
-
-    tag.call("train", QVariantList());
+    m_tag.call("train", QVariantList());
 
     emit trainFinished();
 }
 
 void ConvolutionalNeuralNetworksClassification::test()
 {
-//    QDir dir;
-//    if (dir.exists("D:/Licenta/Interfata/resources/results/cnn_results.csv"))
-//    {
-//        dir.remove("D:/Licenta/Interfata/resources/results/cnn_results.csv");
-//    }
+    QDir dir;
+    if (dir.exists("D:/Licenta/Interfata/resources/results/cnn_results.csv"))
+    {
+        dir.remove("D:/Licenta/Interfata/resources/results/cnn_results.csv");
+    }
 
     PythonQt::init(PythonQt::ExternalHelp || PythonQt::RedirectStdOut);
 
-    PythonQtObjectPtr mainContext;
-    PythonQtObjectPtr tag;
+    m_mainContext = PythonQt::self()->getMainModule();
+    m_mainContext.evalFile(":/resources/python/classification_cnn.py");
+    m_tag = m_mainContext.evalScript("ClassificationCNN()\n", Py_eval_input);
+    FormatString* f = new FormatString();
+    m_tag.call("set_data_path", QVariantList() << m_dataPath);
 
-    mainContext = PythonQt::self()->getMainModule();
-    mainContext.evalFile(":/resources/python/classification_cnn.py");
-    tag = mainContext.evalScript("ClassificationCNN()\n", Py_eval_input);
+    m_tag.call("set_generators", QVariantList());
 
-    tag.call("set_data_path", QVariantList() << m_dataPath);
-
-    tag.call("set_generators", QVariantList());
-
-    tag.call("create_model", QVariantList());
+    m_tag.call("create_model", QVariantList());
 
 
-    tag.call("load", QVariantList());
-    tag.call("get_test_accuracy", QVariantList());
+    m_tag.call("load", QVariantList());
 
-    tag.call("generate_confusion_matrix", QVariantList());
-    tag.call("normalize_confusion_matrix", QVariantList());
-    tag.call("plot_confusion_matrix", QVariantList());
-    tag.call("plot_ROC_curve", QVariantList());
+    m_tag.call("get_test_accuracy", QVariantList());
 
-    QVariant rec = tag.call("get_test_recall_per_class", QVariantList());
-    QList<float> recall = convertString(rec.toString());
+    m_tag.call("generate_confusion_matrix", QVariantList());
+    m_tag.call("normalize_confusion_matrix", QVariantList());
+    m_tag.call("plot_confusion_matrix", QVariantList());
+    m_tag.call("plot_ROC_curve", QVariantList());
 
-    QVariant prec = tag.call("get_test_precision_per_class", QVariantList());
-    QList<float> precision = convertString(prec.toString());
+    QVariant rec = m_tag.call("get_test_recall_per_class", QVariantList());
+    QList<float> recall = f->convertString(rec.toString());
+
+    QVariant prec = m_tag.call("get_test_precision_per_class", QVariantList());
+    QList<float> precision = f->convertString(prec.toString());
 
 
     //QVariant trainAcc = tag.call("get_train_accuracy", QVariantList());
     //qDebug()<<trainAcc;
 
-    QVariant testAcc = tag.call("get_test_accuracy_conf_matr", QVariantList());
+    QVariant testAcc = m_tag.call("get_test_accuracy_conf_matr", QVariantList());
 
-    QVariant cls = tag.call("get_classes", QVariantList());
+    QVariant cls = m_tag.call("get_classes", QVariantList());
 
-    QStringList classes = splitString(cls.toString());
+    QStringList classes = f->splitString(cls.toString());
 
-    emit cnnResults(testAcc.toFloat(), recall, precision, classes);
+    emit results(testAcc.toFloat(), recall, precision, classes);
 
     emit testFinished();
-}
-
-QList<float> ConvolutionalNeuralNetworksClassification::convertString(QString string)
-{
-    string.remove(QRegExp("\\,"));
-    string.remove(QRegExp("\\'"));
-    string.remove(QRegExp("\\]"));
-    string.remove(QRegExp("\\["));
-
-    QList<float> floatList;
-
-    QStringList x = string.split(QRegExp("[ ]"), QString::SkipEmptyParts);
-
-    for (int i = 0; i < x.length(); i++)
-        floatList.append(x.at(i).toFloat());
-
-    return floatList;
-}
-
-QStringList ConvolutionalNeuralNetworksClassification::splitString(QString string)
-{
-    string.remove(QRegExp("\\'"));
-    string.remove(QRegExp("\\]"));
-    string.remove(QRegExp("\\["));
-
-    QStringList x = string.split(QRegExp("[,]"), QString::SkipEmptyParts);
-
-    return x;
 }
 

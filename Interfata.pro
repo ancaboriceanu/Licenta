@@ -18,10 +18,14 @@ SOURCES += main.cpp\
     cnn.cpp \
     svm.cpp \
     final.cpp \
-    randomforestclassification.cpp \
-    supportvectormachinesclassification.cpp \
     random_forest.cpp \
+    classification.cpp \
+    supportvectormachinesclassification.cpp \
+    randomforestclassification.cpp \
     convolutionalneuralnetworksclassification.cpp \
+    formatstring.cpp \
+    plot.cpp \
+    algorithmwidget.cpp \
     dynamicplot.cpp
 
 HEADERS  += mainwindow.h \
@@ -29,10 +33,14 @@ HEADERS  += mainwindow.h \
     cnn.h \
     svm.h \
     final.h \
-    randomforestclassification.h \
-    supportvectormachinesclassification.h \
     random_forest.h \
+    classification.h \
+    supportvectormachinesclassification.h \
+    randomforestclassification.h \
     convolutionalneuralnetworksclassification.h \
+    formatstring.h \
+    plot.h \
+    algorithmwidget.h \
     dynamicplot.h
 
 FORMS    += mainwindow.ui \

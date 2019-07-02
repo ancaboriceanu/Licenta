@@ -4,7 +4,7 @@
 #include <PythonQt.h>
 #include <QDebug>
 
-
+#include "formatstring.h"
 
 RandomForestClassification::RandomForestClassification(QObject *parent) : QObject(parent)
 {
@@ -51,49 +51,24 @@ void RandomForestClassification::train()
     m_tag.call("plot_confusion_matrix", QVariantList());
     m_tag.call("plot_ROC_curve", QVariantList());
 
+    FormatString* f = new FormatString();
+
     QVariant rec = m_tag.call("get_test_recall_per_class", QVariantList());
-    QList<float> recall = convertString(rec.toString());
+    QList<float> recall = f->convertString(rec.toString());
 
     QVariant prec = m_tag.call("get_test_precision_per_class", QVariantList());
-    QList<float> precision = convertString(prec.toString());
+    QList<float> precision = f->convertString(prec.toString());
 
     QVariant trainAcc = m_tag.call("get_train_accuracy", QVariantList());
     QVariant testAcc = m_tag.call("get_test_accuracy_conf_matr", QVariantList());
 
     QVariant cls = m_tag.call("get_classes", QVariantList());
 
-    QStringList classes = splitString(cls.toString());
+    QStringList classes = f->splitString(cls.toString());
 
-    emit randomForestResults(trainAcc.toFloat(), testAcc.toFloat(), recall, precision, classes);
+    emit results(trainAcc.toFloat(), testAcc.toFloat(), recall, precision, classes);
 
-    emit finished();
+    emit trainFinished();
 }
 
-QList<float> RandomForestClassification::convertString(QString string)
-{
-    string.remove(QRegExp("\\,"));
-    string.remove(QRegExp("\\'"));
-    string.remove(QRegExp("\\]"));
-    string.remove(QRegExp("\\["));
-
-    QList<float> floatList;
-
-    QStringList x = string.split(QRegExp("[ ]"), QString::KeepEmptyParts);
-
-    for (int i = 0; i < x.length(); i++)
-        floatList.append(x.at(i).toFloat());
-
-    return floatList;
-}
-
-QStringList RandomForestClassification::splitString(QString string)
-{
-    string.remove(QRegExp("\\'"));
-    string.remove(QRegExp("\\]"));
-    string.remove(QRegExp("\\["));
-
-    QStringList x = string.split(QRegExp("[,]"), QString::KeepEmptyParts);
-
-    return x;
-}
 
